@@ -582,7 +582,7 @@ LockedFlake lockFlake(
                 warn("the flag '--update-input %s' does not match any input", printInputPath(i));
 
         /* Check 'follows' inputs. */
-        newLockFile.check();
+        // newLockFile.check();
 
         debug("new lock file: %s", newLockFile);
 
