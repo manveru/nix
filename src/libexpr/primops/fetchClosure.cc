@@ -208,7 +208,7 @@ static void prim_fetchClosure(EvalState & state, const PosIdx pos, Value * * arg
 }
 
 static RegisterPrimOp primop_fetchClosure({
-    .name = "__fetchClosure",
+    .name = "fetchClosure",
     .args = {"args"},
     .doc = R"(
       Fetch a store path [closure](@docroot@/glossary.md#gloss-closure) from a binary cache, and return the store path as a string with context.
@@ -279,8 +279,7 @@ static RegisterPrimOp primop_fetchClosure({
       However, `fetchClosure` is more reproducible because it specifies a binary cache from which the path can be fetched.
       Also, using content-addressed store paths does not require users to configure [`trusted-public-keys`](@docroot@/command-ref/conf-file.md#conf-trusted-public-keys) to ensure their authenticity.
     )",
-    .fun = prim_fetchClosure,
-    .experimentalFeature = Xp::FetchClosure,
+    .fun = prim_fetchClosure
 });
 
 }

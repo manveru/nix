@@ -12,7 +12,7 @@ struct ExperimentalFeatureDetails
     std::string_view description;
 };
 
-constexpr std::array<ExperimentalFeatureDetails, 14> xpFeatureDetails = {{
+constexpr std::array<ExperimentalFeatureDetails, 13> xpFeatureDetails = {{
     {
         .tag = Xp::CaDerivations,
         .name = "ca-derivations",
@@ -150,13 +150,6 @@ constexpr std::array<ExperimentalFeatureDetails, 14> xpFeatureDetails = {{
             special properties that distinguish them from regular strings, URLs
             containing parameters have to be quoted anyway, and unquoted URLs
             may confuse external tooling.
-        )",
-    },
-    {
-        .tag = Xp::FetchClosure,
-        .name = "fetch-closure",
-        .description = R"(
-            Enable the use of the [`fetchClosure`](@docroot@/language/builtins.md#builtins-fetchClosure) built-in function in the Nix language.
         )",
     },
     {
