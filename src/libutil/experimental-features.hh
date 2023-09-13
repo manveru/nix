@@ -23,6 +23,7 @@ enum struct ExperimentalFeature
     NixCommand,
     RecursiveNix,
     NoUrlLiterals,
+    FetchClosure,
     ReplFlake,
     AutoAllocateUids,
     Cgroups,
